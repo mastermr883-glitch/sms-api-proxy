@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.7.3"
+    }
+  },
+  "routes": [
+    { "src": "/success_otp", "dest": "/api/success_otp.php" },
+    { "src": "/liveaccess", "dest": "/api/liveaccess.php" },
+    { "src": "/getnumber", "dest": "/api/getnumber.php" }
+  ]
+}
