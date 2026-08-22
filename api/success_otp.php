@@ -1,11 +1,10 @@
-
 <?php
+ob_start(); // এই লাইনটি হেডার এরর দূর করবে
 header('Content-Type: application/json');
 
 $input = json_decode(file_get_contents('php://input'), true);
 $user_key = isset($_GET['api_key']) ? $_GET['api_key'] : (isset($input['api_key']) ? $input['api_key'] : '');
 
-// Vercel-এর ড্যাশবোর্ড থেকে সুরক্ষিত ভ্যারিয়েবলগুলো রিড করা হচ্ছে
 $allowed_key = getenv('SUB_API_KEY');
 $main_api_url = getenv('MAIN_API_URL');
 $main_api_key = getenv('MAIN_API_KEY');
