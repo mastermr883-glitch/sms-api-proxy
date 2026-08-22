@@ -1,5 +1,5 @@
-
 <?php
+ob_start(); // এই লাইনটি হেডার এরর দূর করবে
 header('Content-Type: application/json');
 
 $input = json_decode(file_get_contents('php://input'), true);
